@@ -38,11 +38,11 @@ public class Punto1 {
         System.out.println("Media: " + media);
         
         // Varianza
-        double sumatoria = 0;
+        double suma = 0;
         for (int num : arreglo) {
-            sumatoria += Math.pow(num - media, 2);
+            suma += Math.pow(num - media, 2);
         }
-        double varianza = sumatoria / tamaño;
+        double varianza = suma / tamaño;
         System.out.println("Varianza: " + varianza);
         
         // Desviación estándar
@@ -52,15 +52,15 @@ public class Punto1 {
         
         
         // Moda
-        int maxRepeticiones = 0;
+        int maxRep = 0;
         int moda = arreglo[0];
         for (int i = 0; i < tamaño; i++) {
-            int numRepeticiones = 0;
+            int numRep = 0;
             for (int j = 0; j < tamaño; j++) {
-                if (arreglo[j] == arreglo[i]) numRepeticiones++;
+                if (arreglo[j] == arreglo[i]) numRep++;
             }
-            if (numRepeticiones > maxRepeticiones) {
-                maxRepeticiones = numRepeticiones;
+            if (numRep > maxRep) {
+                maxRep = numRep;
                 moda = arreglo[i];
             }
         }
